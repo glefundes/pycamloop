@@ -1,12 +1,8 @@
 
-[![MIT License][license-shield]][license-url]
+[![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
 <br />
 <p align="center">
-  <a href="https://github.com/glefundes/pycamloop">
-    <img src="imgs/logo.png" alt="Logo" height="100">
-  </a>
-
   <h3 align="center">camloop</h3>
 
   <p align="center">
@@ -41,7 +37,7 @@ The project was developed in Python 3.8 and tested with physical local webcams. 
 ### Install
 The project is distributed by pypi, so just:
 ```bash
-pip install pycamloop
+$ pip install pycamloop
 ```
 As usual, conda or venv are recommended to manage your local environments.
 
@@ -103,8 +99,11 @@ Since  most of the boilerplate is now hidden, `camloop` exposes a configuration 
 | `fps`             | float  | None    | FPS value used for the rendering of the sequence of frames. If unspecified, the program will try to estimate if from the length of the recording and number of frames |
 | `exit_key`        | string | 'q'     | Keyboard key used to exit the loop                                                                                                                                    |
 | `screenshot_key`  | string | 's'     | Keyboard key used to capture a screenshot                                                                                                                             |
+
 If you want to use something other than the defaults, define a dictionary object with the desired configuration and pass it to the camloop decorator.
+
 For example, here we want to mirror the frames horizontally, and save an MP4 video of the recording at 23.7 FPS to the `test` directory:
+
 ```python
 from camloop import camloop
 
@@ -126,16 +125,18 @@ grayscale_example()
 ### Demo
 Included in the repo is a demonstration script that can be run out-of-the-box to checkout camloop and it's main functions. There are a few different samples you can checkout, including the grayscale and face detection examples seen in this README).
 
-To run the demo, install camloop and download the script (you can also clone the repo if you want):
+To run the demo, install camloop and clone the repo:
 
 ```bash
-pip install pycamloop
-wget https://github.com/glefundes/pycamloop/blob/master/demo.py?raw=true
+$ pip install pycamloop
+$ git clone https://github.com/glefundes/pycamloop.git
+$ cd pycamloop/
 ```
-Then run it by specifying which demo you want and passing any of the optional arguments (`python3 demo.py -h` for more info on them):
+Then run it by specifying which demo you want and passing any of the optional arguments (`python3 demo.py -h` for more info on them). In this case, we're mirroring the frames from the "face detection" demo and saving the a video of the recording in the "demo-videos" directory:
 
 ```bash
-python3 demo.py face-detection --mirror --save-sequence mp4 -o test/
+$ mkdir demo-videos
+$ python3 demo.py face-detection --mirror --save-sequence mp4 -o demo-videos/
 ```
 
 <!-- ABOUT THE PROJECT -->
@@ -156,13 +157,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Gabriel Lefundes Vieira - lefundes.gabriel@gmail.com
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo.svg?style=flat-squarehttps://img.shields.io/appveyor/build/glefundes/misophonia-bot
-[stars-url]: https://github.com/github_username/repo/stargazers
-
-[license-shield]: https://img.shields.io/github/license/glefundes/pycamloop.svg?style=flat-square
-[license-url]: https://github.com/glefundes/pycamloop/blob/master/LICENSE
