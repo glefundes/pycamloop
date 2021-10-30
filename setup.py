@@ -13,7 +13,7 @@ if os.path.isfile(REQS):
 
 setuptools.setup(
     name="pycamloop",
-    version="0.0.1",
+    version="0.0.2",
     description="Forget the boilerplate from OpenCV camera loops and get to coding the interesting stuff",
     long_description=README,
     long_description_content_type="text/markdown",
