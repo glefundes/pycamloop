@@ -123,7 +123,7 @@ grayscale_example()
 ```
 
 ### Demo
-Included in the repo is a demonstration script that can be run out-of-the-box to checkout camloop and it's main functions. There are a few different samples you can checkout, including the grayscale and face detection examples seen in this README).
+Included in the repo is a demonstration script that can be run out-of-the-box to verify camloop and see it's main functionalities. There are a few different samples you can check out, including the grayscale and face detection examples seen in this README).
 
 To run the demo, install camloop and clone the repo:
 
@@ -142,7 +142,7 @@ $ python3 demo.py face-detection --mirror --save-sequence mp4 -o demo-videos/
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 I work as a computer vision engineer and often find myself having to prototype or debug projects locally using my own webcam as a source. This, of course, means I have to frequently code the same boilerplate OpenCV camera loop in multiple places.
-Eventually I got tired of copy-pasting the same 20 lines from file to file and decided to write a 100-ish package to make my work a little more efficient, less boring and code overall less bloated. That's pretty much it. Also, it was a nice chance to practice playing with decorators.
+Eventually I got tired of copy-pasting the same 20 lines from file to file and decided to write a 100-ish lines package to make my work a little more efficient, less boring and code overall less bloated. That's pretty much it. Also, it was a nice chance to practice playing with decorators.
 
 
 <!-- ABOUT THE PROJECT -->
