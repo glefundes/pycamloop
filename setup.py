@@ -4,16 +4,10 @@ import setuptools
 
 HERE = pathlib.Path(__file__).parent
 README = (HERE / "README.md").read_text()
-REQS = HERE / "requirements.txt"
-
-install_requires = []
-if os.path.isfile(REQS):
-    with open(REQS) as f:
-        install_requires = f.read().splitlines()
 
 setuptools.setup(
     name="pycamloop",
-    version="0.0.2",
+    version="0.0.4",
     description="Forget the boilerplate from OpenCV camera loops and get to coding the interesting stuff",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -28,5 +22,5 @@ setuptools.setup(
     ],
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
-    install_requires=install_requires,
+    install_requires=["opencv-python>=3.4", "imageio>=2.9.0"],
 )
