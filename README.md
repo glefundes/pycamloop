@@ -68,6 +68,7 @@ from camloop import camloop
 # for simplicity, we use cv2's own haar face detector
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
+@camloop()
 def face_detection_example(frame, face_cascade, results_fp=None):
     grayscale_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(grayscale_frame, 1.2, 5)
