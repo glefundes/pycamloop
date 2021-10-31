@@ -37,7 +37,10 @@ def paint_screenshot_message(frame, fp):
 
 def export_sequence(sequence, fp, fmt, duration, fps=None):
     if fmt == "gif":
-        sequence = [cv2.cvtColor(frame, cv2.COLOR_BGR2RGB) for frame in sequence]
+        sequence = [
+            cv2.cvtColor(frame, cv2.COLOR_BGR2RGB) if frame.ndim > 2 else frame
+            for frame in sequence
+        ]
         if fps is not None:
             imageio.mimsave(fp, sequence, format="GIF", fps=fps)
         else:
