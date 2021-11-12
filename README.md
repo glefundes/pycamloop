@@ -1,5 +1,8 @@
 
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
+[![PyPi version](https://badgen.net/pypi/v/pip/)](https://pypi.com/project/pip)
+[![Downloads](https://pepy.tech/badge/pycamloop)](https://pepy.tech/project/pycamloop)
+
 
 <br />
 <p align="center">
