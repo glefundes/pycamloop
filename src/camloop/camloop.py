@@ -94,7 +94,7 @@ def camloop(config={}):
         def wrapper(*args, **kwargs):
             logging.info("initializing camera...")
             source = config.get("source", 0)
-            cap = cv2.VideoCapture(source)
+            cap = config.get("cap", cv2.VideoCapture(source))
 
             override_resolution = config.get("resolution", None)
             if override_resolution is not None:
